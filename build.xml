@@ -1,0 +1,33 @@
+<project default="compile">
+  
+  <property environment="env"/> 
+
+  <property name="projectName" value="sortdemo" /> 
+
+  <path id="project.class.path">
+    <pathelement location="build"/>
+    <pathelement location="lib/junit-4.8.2.jar"/>
+  </path>
+
+  <target name="compile" description="compile my code">
+    <mkdir dir="build" />
+    <javac srcdir="src" destdir="build" includeantruntime="false" debug="true" debuglevel="lines,vars,source">
+
+    <classpath refid="project.class.path" />
+
+  </javac>
+  </target>
+
+  <target name="run"  description="run the program">
+    <java classname="Student">
+
+    <classpath refid="project.class.path" />
+    </java>
+  </target>
+
+
+ <target name="clean">
+   <delete dir="build"/>
+ </target>
+
+</project>
