@@ -1,7 +1,7 @@
 package with_lambda;
+import java.util.Collections;
 
 public class Student {
-
 
     private int perm;
     private String lname;
@@ -29,14 +29,14 @@ public class Student {
 
 	System.out.println("Sort dat arraylist by lname");
 
-	java.util.Collections.sort(classroom, (s1, s2) ->
-			 s1.getName().compareTo(s2.getName()));
+	Collections.sort(classroom,
+			 (s1, s2) ->s1.getName().compareTo(s2.getName()));
 	System.out.println("sorted by lname classroom=" + classroom);	
 
 	System.out.println("Sort dat arraylist by perm");
 
-	java.util.Collections.sort(classroom, (s1, s2) ->
-				   s1.getPerm() -  s2.getPerm());
+	Collections.sort(classroom,
+			 (s1, s2) -> s1.getPerm() -  s2.getPerm());
 
 	System.out.println("sorted by perm classroom=" + classroom);	
 
