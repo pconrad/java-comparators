@@ -7,4 +7,4 @@ public class StudentPermComparator
     public int compare(Student s1, Student s2) {
 	return s1.getPerm() - s2.getPerm();
     }
-};
+}
